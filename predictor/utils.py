@@ -1,9 +1,9 @@
 import pandas as pd
 import pickle
 import numpy as np
-from sklearn.preprocessing import MinMaxScaler
-from sklearn.linear_model import LinearRegression
-from sklearn.ensemble import RandomForestRegressor
+# from sklearn.preprocessing import MinMaxScaler
+# from sklearn.linear_model import LinearRegression
+# from sklearn.ensemble import RandomForestRegressor
 
 def load_data():
     data = pd.read_csv("predictor/BR_data.csv")
