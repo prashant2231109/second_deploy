@@ -30,7 +30,7 @@ SECRET_KEY = 'django-insecure-q_&3hx9tyv+6w!t-f(i1z=_#e5p05syh650y^*)g_^)d7^qii&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 # DEBUG = os.environ.get('DEBUG', 'True') == 'True'
 
@@ -96,18 +96,18 @@ WSGI_APPLICATION = 'groundwater_prediction.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
-
-
 # DATABASES = {
-#     'default':dj_database_url.parse(os.environ.get("DATABASE_URL",))   #asdf
-    
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
 # }
+
+
+DATABASES = {
+    'default':dj_database_url.parse(os.environ.get("DATABASE_URL",))   #asdf
+    
+}
 
 # DATABASES = {
 #     'default': dj_database_url.parse(
