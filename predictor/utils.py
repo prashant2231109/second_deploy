@@ -28,7 +28,7 @@ def train_models(data):
     models_and_scalers = {}
 
     for _, row in data[['DISTRICT', 'LAT', 'LON']].drop_duplicates().iterrows():
-        district_input = int(row['DISTRICT'])
+        district_input = row['DISTRICT']
         latitude_input = round(row['LAT'], 6)
         longitude_input = round(row['LON'], 6)
 
@@ -89,6 +89,7 @@ def predict_groundwater(district, latitude, longitude, month, year):
 
         final_prediction = scaler.inverse_transform([[current_input[-1]]])
         a= round(final_prediction[0][0], 2)
+        
         if a>30 :
             return "This well does not contain enough data to predict"
         else:

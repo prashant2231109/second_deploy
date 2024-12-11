@@ -30,10 +30,11 @@ SECRET_KEY = 'django-insecure-q_&3hx9tyv+6w!t-f(i1z=_#e5p05syh650y^*)g_^)d7^qii&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['predector.onrender.com', "*"]
+ALLOWED_HOSTS = ["*"]
+# 'predector.onrender.com', 
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://predector.onrender.com',
+#     'https://predector.onrender.com',
 ]
 
 
